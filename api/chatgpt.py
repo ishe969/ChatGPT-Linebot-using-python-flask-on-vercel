@@ -3,7 +3,7 @@ import os                                   �
 from openai import OpenAI
 client = OpenAI()
 
-client.api_key = os.getenv("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")
+client.api_key = os.getenv("OPENAI_API_KEY")
 
 
 class ChatGPT:                                                                                                                                          
