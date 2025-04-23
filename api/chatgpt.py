@@ -9,7 +9,7 @@ client.api_key = os.getenv("sk-proj-LOJt7SBuVrhupLBjsWGXGDruV9u54-7fwu2K2aNKj7ZT
 class ChatGPT:                                                                                                                                          
     def __init__(self):
         self.prompt = Prompt()
-        self.model = os.getenv("OPENAI_MODEL", default = "gpt-4.1")
+        self.model = os.getenv("OPENAI_MODEL", default = "gpt-4o")
         self.temperature = float(os.getenv("OPENAI_TEMPERATURE", default = 0))
         self.max_tokens = int(os.getenv("OPENAI_MAX_TOKENS", default = 500))
 
