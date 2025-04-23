@@ -1,12 +1,12 @@
 from api.prompt import Prompt
-import os
+import os                                                                                                                                          
 from openai import OpenAI
 client = OpenAI()
 
-client.api_key = os.getenv("OPENAI_API_KEY")
+client.api_key = os.getenv("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")
 
 
-class ChatGPT:
+class ChatGPT:                                                                                                                                          
     def __init__(self):
         self.prompt = Prompt()
         self.model = os.getenv("OPENAI_MODEL", default = "gpt-4.1")
@@ -15,7 +15,7 @@ class ChatGPT:
 
     def get_response(self):
         response = client.chat.completions.create(
-            model=self.model,
+            model=self.model,                                                                                                                                          
             messages=self.prompt.generate_prompt(),
         )
         return response.choices[0].message.content
